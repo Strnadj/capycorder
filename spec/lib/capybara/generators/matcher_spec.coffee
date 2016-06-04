@@ -35,8 +35,8 @@ describe 'Capybara matcher generator', ->
     describe '#toString', ->
 
       expectations =
-        'shouldHaveSelector': "page.should have_selector('.foo.bar')"
-        'shouldHaveContent' : "page.should have_content('Foo bar')"
+        'shouldHaveSelector': "expect(page).to have_selector('.foo.bar')"
+        'shouldHaveContent' : "expect(page).to have_content('Foo bar')"
 
       for method, template of expectations
 

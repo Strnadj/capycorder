@@ -75,7 +75,7 @@ describe 'Capybara specs', ->
         expectedOutput = """
         it 'SHOULDDOSOMETHING' do
           visit('/foo')
-          page.should have_selector('#foo')
+          expect(page).to have_selector('#foo')
         end
         """
         expect(specs.generate()).toEqual(expectedOutput)

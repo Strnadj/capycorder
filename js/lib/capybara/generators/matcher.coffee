@@ -5,10 +5,10 @@ class Capybara.Generators.Matcher
 
   templates:
     shouldHaveSelector: (data) ->
-      "page.should have_selector('#{data.selector}')"
+      "expect(page).to have_selector('#{data.selector}')"
 
     shouldHaveContent: (data) ->
-      "page.should have_content('#{data.options.content}')"
+      "expect(page).to have_content('#{data.options.content}')"
 
   scopeTemplate: (locator) ->
     ["within_form('#{locator}') do", "end"]

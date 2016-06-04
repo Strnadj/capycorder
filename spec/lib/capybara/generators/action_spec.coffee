@@ -65,12 +65,12 @@ describe 'Capybara action generator', ->
       it 'should return correct template for fillIn', ->
         options = _.extend(allOptions, name: 'fillIn')
         generator = new Capybara.Generators.Action(options)
-        expect(generator.toString()).toBe("fill_in('Foo', :with => 'foobar')")
+        expect(generator.toString()).toBe("fill_in('Foo', with: 'foobar')")
 
       it 'should return correct template for select', ->
         options = _.extend(allOptions, name: 'select')
         generator = new Capybara.Generators.Action(options)
-        expect(generator.toString()).toBe("select('Foo', :from => 'foo')")
+        expect(generator.toString()).toBe("select('Foo', from: 'foo')")
 
       it 'should return correct template for clickLink', ->
         options = _.extend(allOptions, name: 'clickLink')

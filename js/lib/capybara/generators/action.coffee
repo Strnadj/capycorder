@@ -20,10 +20,10 @@ class Capybara.Generators.Action
       "click_button('#{data.locator}')"
 
     fillIn: (data) ->
-      "fill_in('#{data.locator}', :with => '#{data.options.with}')"
+      "fill_in('#{data.locator}', with: '#{data.options.with}')"
 
     select: (data) ->
-      "select('#{data.locator}', :from => '#{data.options.from}')"
+      "select('#{data.locator}', from: '#{data.options.from}')"
 
     clickLink: (data) ->
       "click_link('#{data.locator}')"
